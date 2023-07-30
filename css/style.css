@@ -1,0 +1,1399 @@
+/* <style>
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@100;300;500;700;900&family=Roboto:wght@100;300;400;700;900&display=swap');
+</style> */
+
+
+/* font-family: 'Lobster', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+
+/*-------------------------RESETEO COLORES */
+:root{
+    --gris: #AAAAAA;
+    --rosa1: #F38BA0;
+    --rosa2: #FFBCBC;
+    --rosa3: #FFE2E2;
+    --claro1: #F6F6F6;
+    --claro2: #EDF6E5;
+    --verde1: #B5EAEA;
+
+    /* --degradado: linear-gradient(90deg, var(--limon), var(--verde)); */
+
+}
+
+/*------------------------------RESET---------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.inicio{
+    width: 100%;
+    height: 100vh;
+    /* display: flex; */
+    text-decoration: none;
+    list-style: none;
+    background-color: var(--rosa3);
+
+}
+
+.contenedor{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 180px 1fr auto 1%;
+    grid-template-areas:
+    "cabecera"
+    "mmindex"
+    "pie"
+    "suela";
+ }
+
+.header{
+    grid-area: cabecera;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+    "headerizq headerder"
+    ;
+    gap: 5px;
+    background-image: url(../assets/img/encabezado2.png);
+    background-size: cover;
+}
+
+.header figure{
+    grid-area: headerizq;
+    padding: 20px 0 0 20px;
+    /* justify-self: center;
+    align-self: center; */
+}
+
+.header ul{
+    grid-area: headerder;
+    display: flex;
+    list-style:none;
+    flex-direction: row;
+    justify-content:right;
+    margin-top: 130px;
+    padding-right: 40px;
+    gap: 20PX;
+}
+
+
+.header li a{
+    text-decoration: none;
+    font-size: 22px;
+    color:var(--claro1);
+    font-family: 'Roboto', sans-serif;
+}
+
+.header li a:hover {
+    color: var(--rosa1);
+    font-size: 24px;
+}
+
+.navbar li a:active{
+    color:var(--rosa2);
+    font-size: 24px;
+}
+
+.main-index{
+    grid-area: mmindex;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+    "fer2 fer2 fer2 fer1 fer1 fer1"
+    "fer2 fer2 fer2 fer3 fer3 fer3"
+    "fer2 fer2 fer2 fer3 fer3 fer3"
+    "fer4 fer4 fer4 fer4 fer4 fer4"
+    "fer5 fer5 fer5 fer5 fer5 fer5"
+    "fer5 fer5 fer5 fer5 fer5 fer5"
+    "fer6 fer6 fer6 fer6 fer6 fer6"
+    ;
+    gap: 5px;
+    background-color: var(--rosa3);
+
+}
+
+.main-index-uno{
+    grid-area: fer1;
+    justify-self: center;
+    align-self: center;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    color:#F38BA0;
+    /* -webkit-text-stroke: 1px #000000;     (esto es para darle borde a las letras */
+}
+
+.main-index-dos{
+    grid-area: fer2;
+    padding: 30px;
+    justify-self: center;
+    border-radius: 50%;
+}
+
+.main-index-tres{
+    grid-area: fer3;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif;
+    width: 550px;
+}
+
+.main-index-tres p::first-letter{
+    font-size: 40px;
+    color:var(--rosa1);
+}
+
+
+
+.main-index-cuatro{
+    grid-area: fer4;
+    align-self:self-end;
+    text-align: center;
+    padding-left: 10px;
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+    color:#F38BA0;
+}
+
+.main-index-cinco{
+    grid-area: fer5;
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+}
+
+.main-index-seis{
+    grid-area: fer6;
+    justify-self: center;
+    align-self:self-start;
+    text-align: center;
+    font-size: 20px;
+    width: 1250px;
+}
+
+.main-index-seis p::first-letter{
+    font-size: 40px;
+    color:var(--rosa1);
+}
+
+
+.footer{
+    grid-area: pie;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80% 20%;
+    grid-template-areas:
+    "f1 f2 f3"
+    "f4 f4 f4"
+    ;
+    gap: 3px;
+    background-color: var(--rosa2);
+    padding-top: 20px;
+    padding-left: 20px;
+    color: black;
+    /* color:var(--rosa1); */
+
+}
+
+.footer-footer1 h3{
+    grid-area: f1;
+    padding-bottom: 10px;
+    padding-left: 90px;
+}
+
+.footer-footer1 figure{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.footer-footer1 figcaption{
+    width: 250px;
+}
+
+.footer-footer2 h3{
+    grid-area: f2;
+    padding-left: 170px;
+}
+
+.footer-footer2 figure{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-footer3 {
+    grid-area: f3;
+    display: flex;
+    flex-direction:column;
+}
+
+.footer-footer3 h3{
+    padding-bottom: 10px;
+    padding-left: 130px;
+}
+
+.footer-footer3 figure{
+    display: flex;
+    /* flex-direction: row; */
+    align-self: center;
+    align-items: center;
+}
+
+.footer-footer3 figcaption{
+    padding-left: 5px;
+}
+
+.footer-footer3 figcaption p{
+    letter-spacing: 2px;
+}
+
+
+.suelafebo h6{
+    grid-area: suela;
+    text-align: center;
+    flex-direction: row;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color:var(--gris);
+    background-color: var(--claro1);
+}
+
+
+/* ---- -- --- --- -----tratamientos.HTML  */
+.tratamientos-card{
+    width: 46rem;
+}
+
+.tratamientos-card-text{
+    width: 46rem;
+}
+
+.main-tratamientos{
+    display:grid;
+    grid-template-columns: repeat(6, 1fr) ;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+    "fer1 fer1 fer1 fer1 fer1 fer1"
+    "fer2 fer2 fer3 fer3 fer4 fer4"
+    "fer2 fer2 fer3 fer3 fer4 fer4"
+    "fer5 fer5 fer6 fer6 fer7 fer7"
+    "fer5 fer5 fer6 fer6 fer7 fer7"
+    "fer8 fer8 fer8 fer8 fer8 fer8"
+    "fer9 fer9 fer9 fer9 fer9 fer9"
+    ;
+    gap: 5px;
+    background-color: var(--rosa3);
+
+}
+
+.main-tratamientos1{
+    grid-area: fer1;
+    justify-self: center;
+    align-self: center;
+    font-size: 40px;
+    font-family: 'Delicious Handrawn', cursive;
+    color:#F38BA0;
+
+}
+.main-tratamientos2{
+    grid-area: fer2;
+    padding-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-tratamientos2 img{
+    width: auto;
+    height: auto;
+}
+
+.main-tratamientos3{
+    grid-area: fer3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-tratamientos3 img{
+    width: auto;
+    height: auto;
+}
+
+.main-tratamientos4{
+    grid-area: fer4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-tratamientos4 img{
+    width: auto;
+    height: auto;
+}
+.main-tratamientos5{
+    grid-area: fer5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-tratamientos5 img{
+    width: auto;
+    height: auto;
+}
+.main-tratamientos6{
+    grid-area: fer6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-tratamientos6 img{
+    width: auto;
+    height: auto;
+}
+.main-tratamientos7{
+    grid-area: fer7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-tratamientos7 img{
+    width: auto;
+    height: auto;
+}
+
+.main-tratamientos figcaption{
+    display:flex;
+    justify-content: center;
+}
+
+.main-tratamientos8{
+    grid-area: fer8;
+    justify-self: center;
+    align-self:flex-end;
+    font-size: 20px;
+    font-family: 'Delicious Handrawn', cursive;
+    color:#F38BA0;
+}
+.main-tratamientos9{
+    grid-area: fer9;
+    width: 900px;
+    height: 120px;
+    border: 2px solid #FFBCBC;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+.main-tratamientos9 h3{
+    text-align: center;
+    align-self: center;
+    font-size: 24px;
+
+
+}
+
+
+/******************** TRATAMIENTOS TODOS  */
+.tratamientoTodos-card{
+    width: 18rem;
+}
+
+
+
+.main-tratamientosTodos{
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr repeat(5, 1fr) 5% 2fr;
+    grid-template-areas:
+    "fer1 fer1"
+    "fer2 fer2"
+    "fer2 fer2"
+    "fer2 fer2"
+    "fer2 fer2"
+    "fer2 fer2"
+    "fer3 fer3"
+    "fer4 fer4"
+    "fer4 fer4"
+    ;
+    gap: 5px;
+    background-color: var(--rosa3);
+
+}
+
+.main-tratamientosTodos1{
+    grid-area: fer1;
+    justify-self: center;
+    align-self: center;
+    font-size: 40px;
+    font-family: 'Delicious Handrawn', cursive;
+    color:#F38BA0;
+
+}
+.main-tratamientosTodos2{
+    grid-area: fer2;
+    /* padding-left: 40px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+/* .main-tratamientosTodos2 img{
+    border-radius: 10%;
+    width: 500px;
+    height: 400px;
+    border: 2px solid #FFBCBC;
+} */
+
+.main-tratamientosTodos3{
+    grid-area: fer3;
+    width: 400px;
+    height: 300px;
+    /* border: 2px solid #FFBCBC; */
+    display: flex;
+    align-self:flex-start;
+    justify-self: center;
+
+}
+
+.main-tratamientosTodos4{
+    grid-area: fer4;
+    width: 310px;
+    height: 400px;
+    border: 2px solid #FFBCBC;
+    display: flex;
+    justify-self: center;
+
+}
+
+.tratamientoTextoCard{
+    width: 44rem;
+    text-align: center;
+}
+
+
+/******************** CONTACTOS  */
+
+
+
+
+
+.main-contacto{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr) ;
+    grid-template-rows: 10% 2% 45% 5% 1fr;
+    grid-template-areas:
+    "fer5 fer5 fer5 fer5"
+    "fer1 fer1 fer1 fer1"
+    "fer2 fer2 fer2 fer2"
+    "fer3 fer3 fer3 fer3"
+    "fer4 fer4 fer4 fer4"
+    ;
+    gap: 5px;
+    background-color: var(--rosa3);
+}
+
+
+.main-telefonosRedes{
+    grid-area: fer5;
+    justify-self: center;
+    align-self:flex-end;
+
+}
+
+.main-formulario-h{
+    grid-area: fer1;
+    justify-self: center;
+    align-items: center;
+
+
+}
+
+.main-formulario{
+
+    grid-area: fer2;
+    justify-content: center;
+    align-items: center; 
+    width: auto;
+    height: auto; 
+    height: 900px;
+    font-size: 20px;
+    font-family: 'Delicious Handrawn', cursive;
+    color: var(--rosa1);  
+
+    
+}
+
+/* .main-formulario fieldset{ */
+
+.main-formulario fieldset{
+    /* grid-area: fer2; */
+    background-color: var(--rosa2);
+    border-color: var(--rosa1);
+    color:var(--gris);
+}
+
+/*********************** */
+.formulario {
+    /* grid-area: fer2; */
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    width: 95%;
+    padding: 5rem;
+}
+
+.campo {
+    display: flex;
+    margin-bottom: 2rem;
+}
+.campo__label {
+    flex: 0 0 9rem;
+    text-align: right;
+    padding-right: 2rem;
+}
+.campo__field {
+    flex: 1;
+    border: 1px solid var(--gris);
+}
+.campo__field--textarea {
+    height: 20rem;
+}
+
+.p__error { 
+    /* background-color: red; */
+    text-align: center;
+    padding: 1rem;
+    color: red;
+    text-transform: uppercase;
+}
+
+.p__exito {
+    /* background-color: rgb(11, 236, 11); */
+    text-align: center;
+    padding: 1rem;
+    color: green;
+    text-transform: uppercase;
+}
+
+/*********************** */
+
+.main-comollegar-h{
+    text-align: center;
+    align-self:end;
+    grid-area: fer3;
+    color:var(--gris)
+}
+
+
+
+.main-comollegar{
+    grid-area: fer4;
+    /* padding-left: 40px; */
+    width: auto;
+    margin: 10px 0 20px 0;
+    /* height: 40px; */
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid var(--rosa2); */
+}
+
+
+
+/*---------------------------------------------------- @ MEDIA ------------*/
+/*---------------------------------------------- 1024   */
+@media(max-width:1024px){
+    .header{
+        grid-area: cabecera;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+        "headerarriba"
+        "headerabajo"
+        ;
+        gap: 5px;
+    }
+
+    .header  figure{
+        grid-area: headerarriba;
+        justify-self:left;
+    }
+    .header ul{
+        grid-area: headerabajo;
+        list-style:none;
+        margin-top: 40px;
+        justify-content:left;
+        padding-left: 30px;
+        gap: 20PX;
+    }
+    .header li a{
+        padding: 5px 5px 5px 5px ;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .main-index{
+
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+    "fer2 fer2 fer2 fer1 fer1"
+    "fer2 fer2 fer2 fer3 fer3"
+    "fer2 fer2 fer2 fer3 fer3"
+    "fer4 fer4 fer4 fer4 fer4"
+    "fer5 fer5 fer5 fer5 fer5"
+    "fer5 fer5 fer5 fer5 fer5"
+    "fer6 fer6 fer6 fer6 fer6"
+    ;
+    }
+
+    .main-index-uno{
+        justify-self:left;
+        align-self: center;
+        text-align: left;
+    }
+
+    .main-index-dos{
+        grid-area: fer2;
+        padding: 20px;
+        justify-self: center;
+        align-self: center;
+        border-radius: 50%;
+    }
+
+
+    .main-index-tres{
+        grid-area: fer3;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        font-size: 18px;
+        font-family: 'Poppins', sans-serif;
+        width: 450px;
+        padding-right: 20px;
+    }
+    .main-index-cuatro{
+        grid-area: fer4;
+        text-align: center;
+        padding-left: 10px;
+        font-size: 18px;
+        font-family: 'Lobster', cursive;
+        color:#F38BA0;
+    }
+    .main-index-cinco img{
+        grid-area: fer5;
+        width: 1000px;
+        height: 300px;
+        justify-self: center;
+        align-self: center;
+        text-align: center;
+        border: 2px solid #FFBCBC;
+
+    }
+    .main-index-seis{
+        grid-area: fer6;
+        justify-self: center;
+        align-self:self-start;
+        text-align: center;
+        font-size: 18px;
+        width: 1000px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .footer-footer1{
+        justify-content: center;
+    }
+
+    .footer-footer1 h3{
+
+    }
+
+    .footer-footer2{
+        justify-content: center;
+    }
+
+    .footer-footer2 h3{
+        padding-left: 120px;
+        
+    }
+
+
+    .footer-footer3{
+        display:block;
+        justify-content: center;
+    }
+    .footer-footer3 h3{
+        padding-bottom: 10px;
+        padding-left: 50px;
+        justify-content: center;
+
+    }
+
+
+}
+/*-------------------------------------------------  768  */
+/*------------------------------FOOTER 768  -------- 768 */
+@media(max-width:768px){
+    .footer-footer1 figure img{
+        width: 60px;
+        height: 70px;
+    }
+
+    .footer-footer2 figure .instagram{
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer-footer2 figure .facebook{
+        width: 32px;
+        height: 32px;
+    }
+
+    .footer-footer3 figure .email{
+        width: 38px;
+        height: 27px;
+    }
+
+    .footer-footer3 figure .wts{
+        width: 40px;
+        height: 40px;
+    }
+
+        /* -----------------------   TRATAMIENTOS Media 768 */
+
+        .main-tratamientos{
+            display:grid;
+            grid-template-columns: repeat(2, 1fr) ;
+            grid-template-rows: repeat(9, 1fr);
+            grid-template-areas:
+            "fer1 fer1"
+            "fer2 fer3"
+            "fer2 fer3"
+            "fer4 fer5"
+            "fer4 fer5"
+            "fer6 fer7"
+            "fer6 fer7"
+            "fer8 fer8"
+            "fer9 fer9"
+            ;
+            gap: 2px;
+            background-color: var(--rosa3);
+
+        }
+        .tratamientos-card{
+            width: 36rem;
+        }
+        .tratamientos-card-text{
+            width: 24rem;
+        }
+
+
+
+        .main-tratamientos1{
+            grid-area: fer1;
+            justify-self: center;
+            align-self: center;
+            font-size: 20px;
+            font-family: 'Delicious Handrawn', cursive;
+            color:#F38BA0;
+
+        }
+        .main-tratamientos2{
+            grid-area: fer2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos3{
+            grid-area: fer3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos4{
+            grid-area: fer4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos5{
+            grid-area: fer5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos6{
+            grid-area: fer6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos7{
+            grid-area: fer7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .main-tratamientos8{
+            grid-area: fer8;
+            justify-self: center;
+            align-self:flex-end;
+            font-size: 15px;
+            font-family: 'Delicious Handrawn', cursive;
+            color:#F38BA0;
+        }
+        .main-tratamientos9{
+            grid-area: fer9;
+            width: 700px;
+            height: auto;
+            border: 2px solid #FFBCBC;
+            display: flex;
+            align-self: center;
+            justify-self: center;
+        }
+        .main-tratamientos9 h3{
+            text-align: center;
+            font-size: 22px;
+        }
+
+
+        .tratamientoTextoCard{
+            width: 34rem;
+            text-align: center;
+        }
+        
+
+
+/*------------------------------------   425   */
+@media(max-width:425px){
+    .header figure{
+        grid-area: headerarriba;
+        justify-self:center;
+    }
+    .header ul{
+        grid-area: headerabajo;
+        list-style:none;
+        margin-top: 40px;
+        justify-content:center;
+        gap: 20PX;
+    }
+    .header li a{
+        padding: 5px 5px 5px 5px ;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+
+
+    .main-index{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(10, 1fr);
+        grid-template-areas:
+        "fer1"
+        "fer2"
+        "fer2"
+        "fer3"
+        "fer3"
+        "fer4"
+        "fer5"
+        "fer5"
+        "fer6"
+        "fer6"
+        ;
+        }
+        .main-index-uno{
+            grid-area: fer1;
+            justify-self: center;
+            align-self: center;
+            font-size: 20px;
+            font-family: 'Lobster', cursive;
+            color:#F38BA0;
+        }
+
+
+
+        .main-index-dos{
+            grid-area: fer2;
+            padding: 20px;
+            justify-self: center;
+            align-self: center;
+            border-radius: 50%;
+
+        }
+
+        .main-index-dos img{
+            width: 350px;
+            height: 500px;
+        }
+
+
+        .main-index-tres{
+            grid-area: fer3;
+            justify-self: center;
+            align-self: center;
+            text-align: center;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            width: 360px;
+            padding-right: 20px;
+        }
+        .main-index-cuatro{
+            grid-area: fer4;
+            text-align: center;
+            padding-left: 10px;
+            font-size: 18px;
+            font-family: 'Lobster', cursive;
+            color:#F38BA0;
+        }
+        .main-index-cinco img{
+            grid-area: fer5;
+            width: 360px;
+            height: 200px;
+            justify-self: center;
+            align-self: center;
+            text-align: center;
+            border: 2px solid #FFBCBC;
+
+        }
+        .main-index-seis{
+            grid-area: fer6;
+            justify-self: center;
+            align-self:self-start;
+            text-align: center;
+            font-size: 18px;
+            width: 360px;
+            font-family: 'Poppins', sans-serif;
+        }
+        /* ---------------------------FOOTER  425 ----------*/
+        .footer{
+            grid-area: pie;
+            display: flex;
+            display: grid;
+
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+            "f1"
+            "f2"
+            "f3"
+            ;
+            background-color: var(--rosa2);
+            padding-top: 20px;
+            padding-left: 20px;
+            color: black;
+        }
+
+        .footer-footer1 h3{
+            display:none;
+        }
+
+        .footer-footer1 figure{
+            display: flex;
+            justify-items: center;
+
+        }
+        .footer-footer1 figure img{
+            width: 90px;
+            height: 100px;
+        }
+
+
+        .footer-footer1 figcaption{
+            width: auto;
+            font-size: 22px;
+        }
+
+        .footer-footer2{
+            display: grid;
+            grid-template-columns: repeat(2,50%);
+            grid-template-rows: repeat(1, 2fr);
+            grid-template-areas:
+            "fer2 fer3"
+            ;
+        }
+
+        .footer-footer2 h3{
+            display: none;
+
+        }
+
+        .footer-footer2 figure .instagram{
+            grid-area: fer2;
+            width: 84px;
+            height: 84px;
+            justify-items:center;
+        }
+
+        .footer-footer2 figure .facebook{
+            grid-area: fer3;
+            width: 66px;
+            height: 66px;
+            justify-items:center;
+            align-self: center;
+
+        }
+
+
+        .footer-footer2 figure figcaption{
+            display:none;
+        }
+
+
+        .footer-footer3 {
+            display: flex;
+            flex-direction:column;
+        }
+
+        .footer-footer3 h3{
+            display: none;
+        }
+
+        .footer-footer3 figure{
+            display: flex;
+            flex-direction: row;
+            /* align-self: center;
+            align-items: center; */
+        }
+
+        .footer-footer3 figure .email{
+            width: 80px;
+            height: 54px;
+        }
+
+        .footer-footer3 figure .wts{
+            width: 74px;
+            height: 74px;
+
+        }
+        .footer-footer3 figure figcaption {
+            font-size: 22px;
+            padding-right: 10px;
+        }
+
+        .footer-footer3 figure figcaption p{
+            font-size: 25px;
+        }
+
+
+        .footer-footer3 figcaption p{
+            letter-spacing: 2px;
+        }
+
+
+
+
+
+
+        /* -----------------------   TRATAMIENTOS Media 425 */
+
+
+        .main-tratamientos{
+            display:grid;
+            grid-template-columns: auto ;
+            grid-template-rows: repeat(15, 1fr);
+            grid-template-areas:
+            "fer1"
+            "fer2"
+            "fer2"
+            "fer3"
+            "fer3"
+            "fer4"
+            "fer4"
+            "fer5"
+            "fer5"
+            "fer6"
+            "fer6"
+            "fer7"
+            "fer7"
+            "fer8"
+            "fer9"
+            ;
+            gap: 2px;
+            background-color: var(--rosa3);
+
+        }
+
+        .tratamientos-card{
+            width: 24rem;
+        }
+        .tratamientos-card-text{
+            width: 22rem;
+        }
+
+        .tratamientoTextoCard{
+            width: 22rem;
+            text-align: center;
+        }
+        
+
+
+        .main-tratamientos1{
+            grid-area: fer1;
+            justify-self: center;
+            align-self: center;
+            font-size: 20px;
+            font-family: 'Delicious Handrawn', cursive;
+            color:#F38BA0;
+
+        }
+        .main-tratamientos2{
+            grid-area: fer2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos3{
+            grid-area: fer3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos4{
+            grid-area: fer4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos5{
+            grid-area: fer5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos6{
+            grid-area: fer6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos7{
+            grid-area: fer7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+
+        .main-tratamientos8{
+            grid-area: fer8;
+            justify-self: center;
+            align-self:flex-end;
+            font-size: 15px;
+            font-family: 'Delicious Handrawn', cursive;
+            color:#F38BA0;
+        }
+        .main-tratamientos9{
+            grid-area: fer9;
+            width: 400px;
+            height: auto;
+            border: 2px solid #FFBCBC;
+            display: flex;
+            align-self: center;
+            justify-self: center;
+        }
+        .main-tratamientos9 h3{
+            text-align: center;
+            font-size: 20px;
+        }
+
+
+}
+
+
+
+
+
+/*------------------------------------   375   */
+@media(max-width:375px){
+        /* -----------------------   TRATAMIENTOS Media 375 */
+        .tratamientos-card{
+            width: 30rem;
+        }
+
+        .tratamientos-card-text{
+            width: 28rem;
+        }
+
+        .tratamientoTextoCard{
+            width: 26rem;
+            text-align: center;
+        }
+
+        .main-tratamientos{
+            display:grid;
+            grid-template-columns: auto ;
+            grid-template-rows: repeat(15, 1fr);
+            grid-template-areas:
+            "fer1"
+            "fer2"
+            "fer2"
+            "fer3"
+            "fer3"
+            "fer4"
+            "fer4"
+            "fer5"
+            "fer5"
+            "fer6"
+            "fer6"
+            "fer7"
+            "fer7"
+            "fer8"
+            "fer9"
+            ;
+            gap: 2px;
+            background-color: var(--rosa3);
+
+        }
+
+        .main-tratamientos1{
+            grid-area: fer1;
+            justify-self: center;
+            align-self: center;
+            font-size: 20px;
+            font-family: 'Delicious Handrawn', cursive;
+            color:#F38BA0;
+
+        }
+        .main-tratamientos2{
+            grid-area: fer2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos3{
+            grid-area: fer3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos4{
+            grid-area: fer4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos5{
+            grid-area: fer5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos6{
+            grid-area: fer6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .main-tratamientos7{
+            grid-area: fer7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .main-tratamientos8{
+            grid-area: fer8;
+            justify-self: center;
+            align-self:flex-end;
+            font-size: 15px;
+            font-family: 'Delicious Handrawn', cursive;
+            color:#F38BA0;
+        }
+        .main-tratamientos9{
+            grid-area: fer9;
+            width: 350px;
+            height: auto;
+            border: 2px solid #FFBCBC;
+            display: flex;
+            align-self: center;
+            justify-self: center;
+        }
+        .main-tratamientos9 h3{
+            text-align: center;
+            font-size: 18px;
+        }
+}
+
+/*------------------------------------   320   */
+@media(max-width:320px){
+
+    .tratamientos-card{
+        width: 26rem;
+    }
+    .tratamientos-card-text{
+        width: 20rem;
+    }
+    .main-tratamientos9{
+        grid-area: fer9;
+        width: 320px;
+        height: auto;
+        border: 2px solid #FFBCBC;
+        display: flex;
+        align-self: center;
+        justify-self: center;
+    }
+    .main-tratamientos9 h3{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .tratamientoTextoCard{
+        width: 25rem;
+        text-align: center;
+    }
+}
+
+/****************            */
+
+
+.boton {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    color: var(--gris);
+    text-align: center;
+    padding: 1rem 3rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    border: none;
+}
+
+
+.boton:hover {
+    cursor: pointer;
+}
+.boton--primario {
+    background-color: var(--gris);
+}
+
+/* .boton--secundario {
+    background-color: var(--claro1);
+} */
